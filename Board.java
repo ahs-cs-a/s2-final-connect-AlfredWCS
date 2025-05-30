@@ -112,13 +112,15 @@ public class Board  {
     }
 
     public boolean diagonalWinner(Move move){
+        int x = move.getColumn();
+        int count = 0;
         for(int r = 0; r < rows; r++){
-            if(grid[r][move.getColumn()] == move.getPlayer()){
-                
+            if(grid[r][x] == move.getPlayer()){
+                count ++;
             }
+            x++;
         }
-
-        move.getPlayer();
+        return true;
     }
 
     // if the board contains a winning position, returns the Player that wins.
